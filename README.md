@@ -5,15 +5,13 @@ Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
 To push to Lattice:
 
 ```bash
-ltc start -i docker:///cloudfoundry/lattice-app -c /lattice-app
+ltc start lattice-app -i docker:///cloudfoundry/lattice-app -c /lattice-app
 ```
 
 ### Endpoints
 
-`/`: a simple landing page
+`/`: a simple landing page displaying the index and uptime
 `/env`: displays environment variables
-`/started-at`: the unix timestamp when Lattice-App was started
-`/index`: the Instance Index of the Lattice-App
 `/exit`: instructs Lattice to exit with status code 1
 
 ### To rebuild the dockerimage:
