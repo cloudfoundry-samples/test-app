@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/onsi/grace/helpers"
+	"github.com/pivotal-cf-experimental/lattice-app/helpers"
 )
 
 type Exit struct {
