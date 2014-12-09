@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"time"
@@ -14,9 +15,22 @@ import (
 	"github.com/tedsuo/rata"
 )
 
+var message string
+var quiet bool
+
+func init() {
+	flag.StringVar(&message, "message", "Hello", "The Message to Log and Display")
+	flag.BoolVar(&quiet, "quiet", false, "Less Verbose Logging")
+	flag.Parse()
+}
+
 func main() {
 	logger := lager.NewLogger("lattice-app")
-	logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.DEBUG))
+	if quiet {
+		logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.INFO))
+	} else {
+		logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.DEBUG))
+	}
 
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -30,6 +44,7 @@ func main() {
 	}
 
 	index, err := helpers.FetchIndex()
+	appName := fetchAppName()
 	go func() {
 		t := time.NewTicker(time.Second)
 		for {
@@ -37,7 +52,7 @@ func main() {
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Failed to fetch index: %s\n", err.Error())
 			} else {
-				fmt.Printf("This is Lattice-App on index: %d\n", index)
+				fmt.Println(fmt.Sprintf("%s. Says %s. on index: %d", appName, message, index))
 			}
 		}
 	}()
@@ -49,4 +64,12 @@ func main() {
 		logger.Error("farewell", err)
 	}
 	logger.Info("farewell")
+}
+
+func fetchAppName() string {
+	appName := os.Getenv("APP_NAME")
+	if appName == "" {
+		return "Lattice-app"
+	}
+	return appName
 }

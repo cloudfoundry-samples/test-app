@@ -15,6 +15,7 @@ func New(logger lager.Logger) rata.Handlers {
 		routes.Env:   &Env{},
 		routes.Hello: &Hello{Time: t},
 		routes.Exit:  &Exit{Time: t},
+		routes.Index: &Index{},
 	}
 
 	for route, handler := range handlers {
@@ -36,7 +37,7 @@ type LoggingHandler struct {
 
 func (h *LoggingHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	session := h.Logger.Session(h.Route)
-	session.Info("request.begin")
+	session.Debug("request.begin")
 	h.Handler.ServeHTTP(w, r)
-	session.Info("request.end")
+	session.Debug("request.end")
 }
