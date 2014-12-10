@@ -1,4 +1,4 @@
-# Lattice-App - a simple Go webapp for demonig Lattice
+# Lattice-App - a simple Go webapp for demoing Lattice
 
 Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
 
