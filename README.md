@@ -1,11 +1,11 @@
-# Lattice-App - a simple Go webapp for demoing Lattice
+# Lattice-App - a simple Go webapp for playing with Lattice
 
 Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
 
-To push to Lattice:
+To push to [Lattice](https://github.com/pivotal-cf-experimental/lattice) using [ltc](https://github.com/pivotal-cf-experimental/lattice-cli):
 
 ```bash
-ltc start lattice-app -i docker:///cloudfoundry/lattice-app -c /lattice-app
+ltc start lattice-app -i docker:///cloudfoundry/lattice-app
 ```
 
 ### Endpoints
