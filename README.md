@@ -10,7 +10,7 @@ ltc start lattice-app cloudfoundry/lattice-app
 
 ### Endpoints
 
-`/`: a simple landing page displaying the index and uptime
+`/`: a simple landing page displaying the index and uptime  
 `/env`: displays environment variables
 `/exit`: instructs Lattice to exit with status code 1
 
