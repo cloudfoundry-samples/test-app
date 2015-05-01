@@ -5,7 +5,7 @@ Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
 To push to [Lattice](https://github.com/cloudfoundry-incubator/lattice) using [ltc](https://github.com/cloudfoundry-incubator/lattice/ltc):
 
 ```bash
-ltc start lattice-app cloudfoundry/lattice-app
+ltc create lattice-app cloudfoundry/lattice-app
 ```
 
 ### Endpoints
