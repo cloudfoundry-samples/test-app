@@ -1,0 +1,25 @@
+mode: atomic
+github.com/pivotal-golang/lager/chug/chug.go:35.47,37.21 2 14
+github.com/pivotal-golang/lager/chug/chug.go:40.2,40.12 1 14
+github.com/pivotal-golang/lager/chug/chug.go:37.21,39.3 1 19
+github.com/pivotal-golang/lager/chug/chug.go:43.38,53.15 6 19
+github.com/pivotal-golang/lager/chug/chug.go:57.2,60.16 4 18
+github.com/pivotal-golang/lager/chug/chug.go:64.2,66.8 2 18
+github.com/pivotal-golang/lager/chug/chug.go:53.15,55.3 1 1
+github.com/pivotal-golang/lager/chug/chug.go:60.16,62.3 1 0
+github.com/pivotal-golang/lager/chug/chug.go:69.65,72.16 2 18
+github.com/pivotal-golang/lager/chug/chug.go:76.2,79.74 3 16
+github.com/pivotal-golang/lager/chug/chug.go:91.2,93.8 3 15
+github.com/pivotal-golang/lager/chug/chug.go:101.2,103.8 3 14
+github.com/pivotal-golang/lager/chug/chug.go:111.2,122.9 1 13
+github.com/pivotal-golang/lager/chug/chug.go:72.16,74.3 1 2
+github.com/pivotal-golang/lager/chug/chug.go:79.74,81.9 2 4
+github.com/pivotal-golang/lager/chug/chug.go:81.9,83.11 2 2
+github.com/pivotal-golang/lager/chug/chug.go:86.4,87.34 2 1
+github.com/pivotal-golang/lager/chug/chug.go:83.11,85.5 1 1
+github.com/pivotal-golang/lager/chug/chug.go:93.8,95.10 2 1
+github.com/pivotal-golang/lager/chug/chug.go:98.3,98.33 1 0
+github.com/pivotal-golang/lager/chug/chug.go:95.10,97.4 1 1
+github.com/pivotal-golang/lager/chug/chug.go:103.8,105.10 2 6
+github.com/pivotal-golang/lager/chug/chug.go:108.3,108.35 1 5
+github.com/pivotal-golang/lager/chug/chug.go:105.10,107.4 1 1
