@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/jbayer/lattice-app/helpers"
+	"github.com/pivotal-cf-experimental/lattice-app/helpers"
 )
 
 type Exit struct {

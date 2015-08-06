@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jbayer/lattice-app/helpers"
+	"github.com/pivotal-cf-experimental/lattice-app/helpers"
 )
 
 type Hello struct {
@@ -17,7 +17,7 @@ func (p *Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	styledTemplate.Execute(w, Body{Body: fmt.Sprintf(`
 <div class="hello">
-	<img src="https://fatmintech.files.wordpress.com/2014/06/c8c75-6a00e551c39e1c883401a3fd1ba08f970b-pi.png"></img>
+	Lattice
 </div>
 
 <div class="my-index">My Index Is</div>
