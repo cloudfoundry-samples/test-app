@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/pivotal-cf-experimental/lattice-app/helpers"
+	"github.com/jbayer/lattice-app/helpers"
 )
 
 type Index struct {
