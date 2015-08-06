@@ -6,6 +6,7 @@ var styledTemplate = template.Must(template.New("experiment").Parse(`
 <html>
 <head>
 <style>
+
 body {
     font-family: "helveticaneue-light";
     font-size: 16px;
@@ -32,7 +33,7 @@ dt {
 .hello {
   position:absolute;
   top:0;
-  height:120px;
+  height:200px;
   left:0;
   right:0;
   text-align:center;
@@ -48,7 +49,7 @@ dt {
 
 .my-index {
   position:absolute;
-  top:120px;
+  top:210px;
   height:30px;
   color: #333;
   font-size:30px;
@@ -65,7 +66,7 @@ dt {
 
 .index {
   position:absolute;
-  top:176px;
+  top:256px;
   height:120px;
   left:0;
   right:0;
@@ -82,7 +83,7 @@ dt {
 
 .mid-color {
   position:absolute;
-  top:296px;
+  top:376px;
   height:120px;
   left:0;
   right:0;
@@ -99,7 +100,7 @@ dt {
 
 .bottom-color {
   position:absolute;
-  top:416px;
+  top:496px;
   bottom:0;
   left:0;
   right:0;
