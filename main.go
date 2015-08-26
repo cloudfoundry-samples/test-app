@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pivotal-cf-experimental/lattice-app/handlers"
-	"github.com/pivotal-cf-experimental/lattice-app/helpers"
-	"github.com/pivotal-cf-experimental/lattice-app/routes"
+	"github.com/cloudfoundry-samples/lattice-app/handlers"
+	"github.com/cloudfoundry-samples/lattice-app/helpers"
+	"github.com/cloudfoundry-samples/lattice-app/routes"
 	"github.com/pivotal-golang/lager"
 	"github.com/tedsuo/ifrit"
 	"github.com/tedsuo/ifrit/http_server"
