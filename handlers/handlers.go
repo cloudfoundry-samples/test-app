@@ -16,6 +16,7 @@ func New(logger lager.Logger) rata.Handlers {
 		routes.Hello: &Hello{Time: t},
 		routes.Exit:  &Exit{Time: t},
 		routes.Index: &Index{},
+		routes.Port: &Port{},
 	}
 
 	for route, handler := range handlers {
