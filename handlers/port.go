@@ -10,7 +10,11 @@ type Port struct {
 }
 
 func (_ *Port) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	port := strings.Split(r.Host,":")[1]
+	ports := strings.Split(r.Host,":")
+	if len(ports) < 2 {
+		w.Write([]byte(fmt.Sprintf("0")))
+		return
+	}
 
-	w.Write([]byte(fmt.Sprintf("%s", port)))
+	w.Write([]byte(fmt.Sprintf("%s", ports[1])))
 }
