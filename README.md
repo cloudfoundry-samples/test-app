@@ -1,4 +1,25 @@
-# Lattice-App - a simple Go webapp for playing with Lattice
+# Lattice-App - a simple Go webapp
+
+### Pushing the app to Cloud Foundry
+
+```
+cf push lattice-app
+```
+
+### Endpoints
+
+`/`: a simple landing page displaying the index and uptime  
+`/env`: displays environment variables  
+`/exit`: instructs Lattice to exit with status code 1  
+
+### Configure the app to listen on multiple ports
+
+By providing a customer start command, you can configure the app to listen on multiple ports. The app responds the same way to each port.
+```
+cf push lattice-app -c "lattice-app --ports=7777,8888" 
+```
+
+### Pushing the app to Lattice as a Docker image
 
 Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
 
@@ -7,12 +28,6 @@ To push to [Lattice](https://github.com/cloudfoundry-incubator/lattice) using [l
 ```bash
 ltc create lattice-app cloudfoundry/lattice-app
 ```
-
-### Endpoints
-
-`/`: a simple landing page displaying the index and uptime  
-`/env`: displays environment variables  
-`/exit`: instructs Lattice to exit with status code 1  
 
 ### To rebuild the dockerimage:
 
