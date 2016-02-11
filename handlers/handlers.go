@@ -9,14 +9,16 @@ import (
 	"github.com/tedsuo/rata"
 )
 
-func New(logger lager.Logger) rata.Handlers {
+func New(logger lager.Logger, ports []string) rata.Handlers {
 	t := time.Now()
 	handlers := rata.Handlers{
 		routes.Env:   &Env{},
 		routes.Hello: &Hello{Time: t},
 		routes.Exit:  &Exit{Time: t},
 		routes.Index: &Index{},
-		routes.Port: &Port{},
+		routes.Port: &Port{
+			Ports: ports,
+		},
 	}
 
 	for route, handler := range handlers {

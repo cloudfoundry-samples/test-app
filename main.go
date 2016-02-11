@@ -45,7 +45,7 @@ func main() {
 	ports := getServerPorts()
 
 	logger.Info("lattice-app.starting", lager.Data{"ports": ports})
-	handler, err := rata.NewRouter(routes.Routes, handlers.New(logger))
+	handler, err := rata.NewRouter(routes.Routes, handlers.New(logger, ports))
 	if err != nil {
 		logger.Fatal("router.creation.failed", err)
 	}
