@@ -9,7 +9,7 @@ import (
 	"github.com/tedsuo/rata"
 )
 
-func New(logger lager.Logger, ports []string) rata.Handlers {
+func New(logger lager.Logger, port string) rata.Handlers {
 	t := time.Now()
 	handlers := rata.Handlers{
 		routes.Env:   &Env{},
@@ -17,7 +17,7 @@ func New(logger lager.Logger, ports []string) rata.Handlers {
 		routes.Exit:  &Exit{Time: t},
 		routes.Index: &Index{},
 		routes.Port: &Port{
-			Ports: ports,
+			Port: port,
 		},
 	}
 

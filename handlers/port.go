@@ -6,9 +6,9 @@ import (
 )
 
 type Port struct {
-	Ports []string
+	Port string
 }
 
 func (p *Port) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(fmt.Sprintf("%s", p.Ports)))
+	w.Write([]byte(fmt.Sprintf("%s", p.Port)))
 }

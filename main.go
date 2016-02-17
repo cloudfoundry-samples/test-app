@@ -45,11 +45,6 @@ func main() {
 	ports := getServerPorts()
 
 	logger.Info("lattice-app.starting", lager.Data{"ports": ports})
-	handler, err := rata.NewRouter(routes.Routes, handlers.New(logger, ports))
-	if err != nil {
-		logger.Fatal("router.creation.failed", err)
-	}
-
 	index, err := helpers.FetchIndex()
 	appName := fetchAppName()
 	go func() {
@@ -69,6 +64,11 @@ func main() {
 		wg.Add(1)
 		go func(wg *sync.WaitGroup, port string) {
 			defer wg.Done()
+			handler, err := rata.NewRouter(routes.Routes, handlers.New(logger, port))
+			if err != nil {
+				logger.Fatal("router.creation.failed", err)
+			}
+
 			server := ifrit.Envoke(http_server.New(":"+port, handler))
 			logger.Info("lattice-app.up", lager.Data{"port": port})
 			err = <-server.Wait()
