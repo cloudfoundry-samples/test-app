@@ -11,6 +11,7 @@ cf push lattice-app
 `/`: a simple landing page displaying the index and uptime  
 `/env`: displays environment variables  
 `/exit`: instructs Lattice to exit with status code 1  
+`/port`: returns the local port the request was received on
 
 ### Configure the app to listen on multiple ports
 
