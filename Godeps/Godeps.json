@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/cloudfoundry-samples/lattice-app",
+	"ImportPath": "github.com/cloudfoundry-samples/test-app",
 	"GoVersion": "go1.5",
 	"Deps": [
 		{

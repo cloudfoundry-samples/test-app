@@ -1,33 +1,31 @@
-# Lattice-App - a simple Go webapp
+# Test App - a simple Go webapp
 
 ### Pushing the app to Cloud Foundry
 
 ```
-cf push lattice-app
+cf push test-app
 ```
 
 ### Endpoints
 
-`/`: a simple landing page displaying the index and uptime  
-`/env`: displays environment variables  
-`/exit`: instructs Lattice to exit with status code 1  
+`/`: a simple landing page displaying the index and uptime
+`/env`: displays environment variables
+`/exit`: instructs the app to exit with status code 1
 `/port`: returns the local port the request was received on
 
 ### Configure the app to listen on multiple ports
 
 By providing a customer start command, you can configure the app to listen on multiple ports. The app responds the same way to each port.
 ```
-cf push lattice-app -c "lattice-app --ports=7777,8888" 
+cf push test-app -c "test-app --ports=7777,8888"
 ```
 
-### Pushing the app to Lattice as a Docker image
+### Pushing the app to CF as a Docker image
 
-Lattice-App is packaged as a docker image at cloudfoundry/lattice-app
-
-To push to [Lattice](https://github.com/cloudfoundry-incubator/lattice) using [ltc](https://github.com/cloudfoundry-incubator/lattice/ltc):
+Simple App is also packaged as a docker image at cloudfoundry/test-app
 
 ```bash
-ltc create lattice-app cloudfoundry/lattice-app
+cf push my-test-app -o cloudfoundry/test-app
 ```
 
 ### To rebuild the dockerimage:

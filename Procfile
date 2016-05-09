@@ -1,1 +1,1 @@
-web: lattice-app
+web: test-app

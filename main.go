@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/cloudfoundry-samples/lattice-app/handlers"
-	"github.com/cloudfoundry-samples/lattice-app/helpers"
-	"github.com/cloudfoundry-samples/lattice-app/routes"
+	"github.com/cloudfoundry-samples/test-app/handlers"
+	"github.com/cloudfoundry-samples/test-app/helpers"
+	"github.com/cloudfoundry-samples/test-app/routes"
 	"github.com/pivotal-golang/lager"
 	"github.com/tedsuo/ifrit"
 	"github.com/tedsuo/ifrit/http_server"
@@ -35,7 +35,7 @@ func init() {
 func main() {
 	flag.Parse()
 
-	logger := lager.NewLogger("lattice-app")
+	logger := lager.NewLogger("test-app")
 	if quiet {
 		logger.RegisterSink(lager.NewWriterSink(os.Stdout, lager.INFO))
 	} else {
@@ -44,7 +44,7 @@ func main() {
 
 	ports := getServerPorts()
 
-	logger.Info("lattice-app.starting", lager.Data{"ports": ports})
+	logger.Info("test-app.starting", lager.Data{"ports": ports})
 	index, err := helpers.FetchIndex()
 	appName := fetchAppName()
 	go func() {
@@ -70,7 +70,7 @@ func main() {
 			}
 
 			server := ifrit.Envoke(http_server.New(":"+port, handler))
-			logger.Info("lattice-app.up", lager.Data{"port": port})
+			logger.Info("test-app.up", lager.Data{"port": port})
 			err = <-server.Wait()
 			if err != nil {
 				logger.Error("shutting down server", err, lager.Data{"server port": port})
@@ -85,7 +85,7 @@ func main() {
 func fetchAppName() string {
 	appName := os.Getenv("APP_NAME")
 	if appName == "" {
-		return "Lattice-app"
+		return "test-app"
 	}
 	return appName
 }

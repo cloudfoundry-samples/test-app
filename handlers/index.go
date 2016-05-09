@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/cloudfoundry-samples/lattice-app/helpers"
+	"github.com/cloudfoundry-samples/test-app/helpers"
 )
 
 type Index struct {

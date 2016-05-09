@@ -1,6 +1,6 @@
 FROM busybox:ubuntu-14.04
 
-ENTRYPOINT ["/lattice-app"]
+ENTRYPOINT ["/test-app"]
 
-COPY lattice-app /lattice-app
-RUN chmod a+x /lattice-app
+COPY test-app /test-app
+RUN chmod a+x /test-app

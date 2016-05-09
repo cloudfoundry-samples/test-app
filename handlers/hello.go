@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/cloudfoundry-samples/lattice-app/helpers"
+	"github.com/cloudfoundry-samples/test-app/helpers"
 )
 
 type Hello struct {
@@ -17,7 +17,7 @@ func (p *Hello) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	styledTemplate.Execute(w, Body{Body: fmt.Sprintf(`
 <div class="hello">
-	Lattice
+	Test App	
 </div>
 
 <div class="my-index">My Index Is</div>

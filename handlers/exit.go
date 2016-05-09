@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/cloudfoundry-samples/lattice-app/helpers"
+	"github.com/cloudfoundry-samples/test-app/helpers"
 )
 
 type Exit struct {
@@ -34,7 +34,7 @@ func (p *Exit) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 	go func() {
 		time.Sleep(100 * time.Millisecond)
-		fmt.Println("Lattice-App shutting down")
+		fmt.Println("Test App shutting down")
 		os.Exit(1)
 	}()
 }
