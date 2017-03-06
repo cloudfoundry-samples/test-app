@@ -1,0 +1,5 @@
+---
+applications:
+  - name: test-app
+    memory: 256M
+    instances: 1
