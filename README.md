@@ -8,10 +8,10 @@ cf push test-app
 
 ### Endpoints
 
-`/`: a simple landing page displaying the index and uptime
-`/env`: displays environment variables
-`/exit`: instructs the app to exit with status code 1
-`/port`: returns the local port the request was received on
+- `/`: a simple landing page displaying the index and uptime
+- `/env`: displays environment variables
+- `/exit`: instructs the app to exit with status code 1
+- `/port`: returns the local port the request was received on
 
 ### Configure the app to listen on multiple ports
 
