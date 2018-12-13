@@ -36,3 +36,6 @@ cf push my-test-app -o cloudfoundry/test-app
 ```
 
 Assumes you have the go toolchain (with the ability to cross-compile to different platforms) and docker installed and pointing at your docker daemon.
+
+### Dependencies
+This app uses [`dep`](https://golang.github.io/dep/) to manage its dependencies. To upgrade current deps or add new ones, please refer to the `dep` [docs](https://golang.github.io/dep/docs/introduction.html).

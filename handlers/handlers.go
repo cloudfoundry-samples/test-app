@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"time"
 
+	"code.cloudfoundry.org/lager"
 	"github.com/cloudfoundry-samples/test-app/routes"
-	"github.com/pivotal-golang/lager"
 	"github.com/tedsuo/rata"
 )
 

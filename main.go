@@ -8,10 +8,10 @@ import (
 	"sync"
 	"time"
 
+	"code.cloudfoundry.org/lager"
 	"github.com/cloudfoundry-samples/test-app/handlers"
 	"github.com/cloudfoundry-samples/test-app/helpers"
 	"github.com/cloudfoundry-samples/test-app/routes"
-	"github.com/pivotal-golang/lager"
 	"github.com/tedsuo/ifrit"
 	"github.com/tedsuo/ifrit/http_server"
 	"github.com/tedsuo/rata"
